@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIOPANE</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../css/works.css" media="screen">
+</head>
+
+<body>
+
+    <div id="top"></div>
+    <div class="header">
+        <div>
+            <a href="./index.html">
+                <h3>Kapou</h3>
+            </a>
+        </div>
+        <div>
+            <a href="./index.html#UI">
+                <h5>Works</h5>
+            </a>
+            <a href="./index.html#about" class="lastOne">
+                <h5>About</h5>
+            </a>
+        </div>
+        <div>
+            <a href="mailto: kapouwork@gmail.com">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M4 7H28V24C28 24.2652 27.8946 24.5196 27.7071 24.7071C27.5196 24.8946 27.2652 25 27 25H5C4.73478 25 4.48043 24.8946 4.29289 24.7071C4.10536 24.5196 4 24.2652 4 24V7Z"
+                        stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M28 7L16 18L4 7" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+            <a onclick="goTop()">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M16 28V9" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M7 18L16 9L25 18" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M5 5H27" stroke="#303030" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="intro">
+        <h1>MIOPANE</h1>
+        <div class="infomation">
+            <div>
+                <h5>團隊</h5>
+                <p>1人</p>
+            </div>
+            <div>
+                <h5>角色</h5>
+                <p>UX designer</p>
+                <p>UI designer</p>
+            </div>
+            <div>
+                <h5>技能</h5>
+                <p>Figma</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="overview">
+        <img src="../image/miopane/0.jpg">
+        <div>
+            <div>
+                <h3>Overview</h3>
+                <p>
+                    MIOPANE 是台灣的烘焙食品品牌，希望能讓客人享受健康無負擔的麵包。但觀察 MIOPANE
+                    原本的網站，可以發現它只專注於購物的功能，內容都在介紹新商品或活動，沒有讓使用者了解到品牌的特色，也跟品牌形象不相符。我以品牌原本的網站為基礎，重新整理了混亂的網站架構及內容的層級關係，並強調品牌素食、健康、環保的特色。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="compo">
+        <h3>Information Architecture</h3>
+        <div>
+            <div>
+                <p>MIOPANE 原網站直接把十多個商品種類放在 Header
+                    裡，而且與門市等不同類型的資訊混在一起，讓使用者難以分辨。我把資訊分為活動資訊、商品訂購、關於我們、常見問題四大類別，減少使用者的選擇障礙，並且把類似的資訊合一（如品牌故事與美味堅持合為一個頁面）。
+                </p>
+            </div>
+            <img src="../image/miopane/IA.png">
+        </div>
+    </div>
+
+    <div class="compo">
+        <h3>Design Guideline</h3>
+        <div>
+            <div class="two">
+                <div>
+                    <h5>Color</h5>
+                    <p>MIOPANE
+                        是一個面向小資族的品牌，從店面裝潢及品牌視覺可以看出品牌想要帶給顧客有質感、具有個性的印象，因此我決定選用深灰色作為主色，藍綠色、淡黃色作為輔助色，使網頁設計與品牌印象相符，給予使用者一貫的品牌印象。
+                    </p>
+                </div>
+                <div>
+                    <h5>Typography</h5>
+                    <p>字體上我選用了 Noto Serif 和 Noto Sans 兩種字體，在尺寸較大的標題使用襯線體，給人優雅生動的感覺，而尺寸較小的內文為了更流暢的閱讀體驗，使用了易讀性高的黑體。</p>
+                </div>
+            </div>
+            <img src="../image/miopane/Design Guideline.jpg">
+        </div>
+    </div>
+
+    <div class="compo">
+        <h3>Design Point</h3>
+        <div>
+            <div>
+                <h5>Header Menu</h5>
+                <p>我把搜尋、門市、會員、購物車等常用功能放於右上方，中間則是活動資訊、商品訂購及關於我們三大類別，其中為了讓使用者能更簡單地找到所需的商品類別，我把商品的圖片也一同放到 Menu
+                    中，同時也能讓使用者更了解該類別的內容。手機版則選擇把功能及分類都放到Hamburger中（除了最常用的購物車）。</p>
+            </div>
+            <img src="../image/miopane/Point1.jpg">
+        </div>
+        <div class="right">
+            <div>
+                <h5>Product Card</h5>
+                <p>MIOPANE 重視素食主義，有各種素別的麵包，因此我以標籤的形式把素別、含酒、期間限定等資訊標記出來，讓資訊層級更分明，使用者也可以透過標籤搜尋。</p>
+            </div>
+            <img src="../image/miopane/Point2.jpg">
+        </div>
+        <div>
+            <div>
+                <h5>Product Detail Page</h5>
+                <p>
+                    商品內頁分為左右兩側，左側放商品照片、商品描述、營養標籤等詳細資訊，右側的固定區塊則放上商品名稱、價錢、加入購物車等重要資訊及常用功能。這樣分成兩側可以讓左側的資訊易於閱讀，也讓使用者可以隨時把商品加入購物車或分享商品。
+                </p>
+            </div>
+            <img src="../image/miopane/Point3.jpg">
+        </div>
+        <div class="right">
+            <div>
+                <h5>Checkout Page</h5>
+                <p>使用者可以在左側確認訂單內容，右側進行結帳流程，其中使用者可以選擇過去儲存了的寄送地址及付款方式，讓使用者不需要重複輸入。</p>
+            </div>
+            <img src="../image/miopane/Point4.jpg">
+        </div>
+    </div>
+
+
+    <div class="prototype">
+        <div class="prototype_img">
+            <img src="../image/miopane/1.jpg">
+            <div>
+                <h3>More Details in Prototype</h3>
+            </div>
+        </div>
+
+        <div class="two_iframe">
+            <iframe class="figma_box" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FuyobwSFG3bQ234mx1sYGNJ%2Fmiopane-website%3Fpage-id%3D188%253A712%26node-id%3D208%253A1513%26viewport%3D551%252C211%252C0.05%26scaling%3Dscale-down-width%26starting-point-node-id%3D208%253A1513"
+                allowfullscreen></iframe>
+
+            <iframe class="figma_box" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450"
+                src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FuyobwSFG3bQ234mx1sYGNJ%2Fmiopane-website%3Fpage-id%3D453%253A4127%26node-id%3D453%253A4129%26viewport%3D391%252C191%252C0.19%26scaling%3Dscale-down%26starting-point-node-id%3D453%253A4129"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+
+
+    <div class="marquee">
+        <div class="marquee__content">
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+        </div>
+
+        <div aria-hidden="true" class="marquee__content">
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+            <h2>Other Works</h2>
+            <svg width="20" height="20" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.6626 18.9001C18.2433 18.6996 18.6996 18.2433 18.9001 17.6626L23.1096 5.47388C23.7299 3.67771 26.2701 3.67771 26.8904 5.47388L31.0999 17.6626C31.3004 18.2433 31.7567 18.6996 32.3374 18.9001L44.5261 23.1096C46.3223 23.7299 46.3223 26.2701 44.5261 26.8904L32.3374 31.0999C31.7567 31.3004 31.3004 31.7567 31.0999 32.3374L26.8904 44.5261C26.2701 46.3223 23.7299 46.3223 23.1096 44.5261L18.9001 32.3374C18.6996 31.7567 18.2433 31.3004 17.6626 31.0999L5.47388 26.8904C3.67771 26.2701 3.67771 23.7299 5.47388 23.1096L17.6626 18.9001Z"
+                    fill="white" />
+            </svg>
+        </div>
+    </div>
+
+
+    <div class="two_card other_work">
+
+        <div class="work_card small_card">
+            <div class="small_card_img">
+                <a href="./children.html">
+                    <img src="../image/兒童探索館/0.jpg">
+                </a>
+            </div>
+
+            <div class="work_card_infor">
+                <h6>Exploratorium</h6>
+                <h4>兒童探索館</h4>
+                <a href="./news.html"><span>view more</span></a>
+            </div>
+        </div>
+
+        <div class="work_card small_card">
+            <div class="small_card_img">
+                <a href="./collection.html">
+                    <img class="small_card_img" src="../image/collection/0.jpg">
+                </a>
+            </div>
+
+            <div class="work_card_infor">
+                <h6>Multiple</h6>
+                <h4>UI 圖版集</h4>
+                <a href="./children.html"><span>view more</span></a>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous">
+        </script>
+
+    <!-- my js -->
+    <script src="../js/works.js"></script>
+
+</body>
+
+</html>

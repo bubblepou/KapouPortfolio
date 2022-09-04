@@ -1,0 +1,446 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Noto+Sans+TC:wght@400;500&family=Noto+Serif+TC:wght@600&family=Poppins:wght@400;500&display=swap');
+
+
+// color //
+$main-green: #2F4F4F;
+$light-green: #D8EDED;
+$pink: #B41F42;
+$black: #353535;
+$black-hover: #7b7b7b;
+$background: #F6F0E8;
+
+// font //
+$sans: 'Poppins', 'Noto Sans TC', sans-serif;
+$serif: 'Libre Baskerville', 'Noto Serif TC', serif;
+
+$border: 2px solid $black;
+
+// 禁止複製 // 
+html {
+    font-size: 16px;
+}
+
+* {
+    margin: 0;
+    color: $black;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background;
+}
+
+a {
+    text-decoration: none;
+    color: $black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-family: $serif;
+    font-size: 4.8rem;
+    color: $main-green;
+    line-height: 150%;
+}
+
+h2 {
+    font-family: $serif;
+    font-size: 2.5rem;
+    color: $main-green;
+}
+
+h3 {
+    font-family: $serif;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: $sans;
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+
+h5 {
+    font-family: $sans;
+    font-size: 1.4rem;
+    font-weight: 400;
+    letter-spacing: 0.05rem;
+}
+
+h6 {
+    font-family: $sans;
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.05rem;
+}
+
+p {
+    font-family: $sans;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 200%;
+    letter-spacing: 0.05rem;
+}
+
+
+//Header//
+
+.header {
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background-color: $background;
+    height: 90px;
+    border-bottom: $border;
+
+
+    div {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        &:nth-child(1) {
+            width: 20vw;
+
+            h3 {
+                transition: color 0.2s ease;
+            }
+
+            @media(max-width:1100px) {
+                width: 30vw;
+            }
+
+            @media(max-width:500px) {
+                width: 40vw;
+            }
+
+            // no hover //
+            @media(min-width:500px) {
+                h3:hover {
+                    color: $pink;
+                    transition: color 0.6s ease;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            width: 60vw;
+
+            a:not(.lastOne) {
+                margin-right: 30px;
+            }
+
+            h5 {
+                transition: color 0.6s ease;
+            }
+
+            @media(max-width:1100px) {
+                width: 40vw;
+            }
+
+            @media(max-width:500px) {
+                width: 60vw;
+            }
+
+            @media(min-width:500px) {
+                h5:hover {
+                    color: $pink;
+                    transition: color 0.6s ease;
+                }
+            }
+        }
+
+        &:nth-child(3) {
+            width: 20vw;
+
+            @media(max-width:1100px) {
+                width: 30vw;
+            }
+
+            @media(max-width:500px) {
+                display: none;
+            }
+
+            a {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+
+                &:first-child {
+                    margin-right: 20px;
+                }
+
+                path {
+                    transition: all 0.2s ease;
+                }
+
+                &:hover {
+                    path {
+                        stroke: $pink;
+                        transition: all 0.2s ease;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// 走馬燈 //
+
+.marquee {
+    --gap: 1rem;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: var(--gap);
+    background-color: $main-green;
+    padding: 30px 0;
+}
+
+.marquee__content {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll 20s linear infinite;
+
+    h2 {
+        color: white;
+    }
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+// imgBox //
+
+.imgBox {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    a:hover {
+        img {
+            transform: scale(1.08);
+            transition: transform 0.5s ease;
+        }
+    }
+
+    img {
+        transform: scale(1);
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    @media(min-width:500px) {
+        .carousel-inner:hover~.tool a span {
+            color: $pink;
+            transition: all 0.5s ease;
+        }
+    }
+
+    .tool a span {
+        transition: all 0.5s ease;
+
+        @media(min-width:500px) {
+            &:hover {
+                color: $pink;
+                transition: all 0.5s ease;
+            }
+        }
+    }
+
+    .tool {
+        background-color: white;
+        //border-top: $border;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            align-items: center;
+        }
+
+        span {
+            font-family: $serif;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+// work card // 
+
+.work_card {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+
+    h4,
+    h6 {
+        color: $main-green;
+    }
+
+    h4 {
+        margin: 5px 0 10px 0;
+    }
+
+    .carousel {
+        margin-right: 2vw;
+        width: 60vw;
+        border-radius: 5px;
+    }
+}
+
+.work_card_infor {
+    width: 20vw;
+
+    @media(max-width:900px) {
+        width: 28vw;
+    }
+
+    span {
+        display: block;
+        margin-top: 30px;
+        font-family: $serif;
+        font-size: 1.1rem;
+        transition: all 0.5s ease;
+
+        &:hover {
+            color: $pink;
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+.small_card {
+    flex-direction: column;
+
+    .work_card_infor {
+        margin-top: 10px;
+
+        span {
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.small_card_img {
+    width: 40vw;
+    border-radius: 5px;
+    overflow: hidden;
+
+    a:hover {
+        img {
+            transform: scale(1.08);
+            transition: transform 0.5s ease;
+        }
+    }
+
+    img {
+        transform: scale(1);
+        width: 100%;
+        transition: transform 0.5s ease;
+    }
+
+    &:hover~.work_card_infor span {
+        color: $pink;
+        transition: all 0.5s ease;
+    }
+}
+
+.two_card {
+    display: flex;
+    padding: 0 9vw;
+    justify-content: space-between;
+}
+
+@media(max-width:900px) {
+    .small_card_img {
+        width: 44vw;
+    }
+
+    .two_card {
+        padding: 0 5vw;
+    }
+}
+
+@media(max-width:500px) {
+    .work_card {
+        flex-direction: column;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+
+        .carousel {
+            margin-right: 0;
+            width: 90vw;
+            //border-radius: 0;
+        }
+    }
+
+    .work_card_infor {
+        width: 60vw !important;
+        margin-left: 10vw;
+        margin-top: 20px;
+    }
+
+    .small_card_img {
+        width: 90vw !important;
+    }
+
+    .two_card {
+        flex-direction: column;
+    }
+}
+
+// RWD // 
+
+@media(max-width:1100px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h4 {
+        font-size: 1.6rem;
+    }
+}
+
+@media(max-width:500px) {
+    html {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+}
